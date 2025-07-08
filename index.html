@@ -1,56 +1,53 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DiscordCode</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Karol | Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>DiscordCode</h1>
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">O projekcie</a>
-            <a href="#team">Zarząd</a>
-            <a href="#contact">Kontakt</a>
-        </nav>
-        <button class="theme-toggle">🌙 Tryb ciemny</button>
-    </header>
-    
-    <main>
-        <section id="home" class="section">
-            <h2>Witaj w DiscordCode</h2>
-            <p>Tworzymy nowoczesne narzędzia i boty dla Discorda!</p>
-        </section>
-        
-        <section id="about" class="section">
-            <h2>O projekcie</h2>
-            <p>DiscordCode to projekt, który skupia się na tworzeniu zaawansowanych botów i systemów dla serwerów Discord.</p>
-        </section>
-        
-        <section id="team" class="section">
-            <h2>Zarząd</h2>
-            <div class="team-member">
-                <h3>@JLoveHotMoms</h3>
-                <p>Główny właściciel, założyciel projektu</p>
-            </div>
-            <div class="team-member">
-                <h3>@Zemsta_</h3>
-                <p>CEO, odpowiedzialny za rozwój i zarządzanie zespołem</p>
-            </div>
-        </section>
-        
-        <section id="contact" class="section">
-            <h2>Kontakt</h2>
-            <a href="https://discord.com/invite/wXmCusgpsK" target="_blank" class="contact-button">Dołącz do DiscordCode</a>
-        </section>
-    </main>
+  <header class="hero">
+    <img src="assets/avatar.png" alt="Karol avatar" class="avatar"/>
+    <h1>Karol</h1>
+    <p>Tworzę <span>boty Discord</span> i <span>grafiki</span></p>
+    <a href="#kontakt" class="btn">Skontaktuj się</a>
+  </header>
 
-    <footer>
-        <p>&copy; 2025 DiscordCode - Wszelkie prawa zastrzeżone.</p>
-    </footer>
+  <section id="o-mnie" class="fade-in">
+    <h2>O mnie</h2>
+    <p>Cześć! Nazywam się Karol. Tworzę boty Discord, grafiki oraz pomagam w tworzeniu serwerów. Lubię robić rzeczy porządnie i z pasją. Szukasz kogoś do projektu? Napisz do mnie!</p>
+  </section>
 
-    <script src="script.js"></script>
+  <section id="projekty" class="fade-in">
+    <h2>Portfolio</h2>
+
+    <div class="projekty-grid">
+      <div class="projekt">
+        <h3>Bot Moderacyjny</h3>
+        <p>Zaawansowany bot do zarządzania serwerem Discord. Z komendami typu `/ban`, `/mute`, `/ticket`.</p>
+      </div>
+      <div class="projekt">
+        <h3>Banner partnerstwa</h3>
+        <p>Estetyczny banner w stylu premium, idealny pod ogłoszenia i współprace.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="kontakt" class="fade-in">
+    <h2>Kontakt</h2>
+    <p>Discord: <strong>karolmawith</strong></p>
+    <form id="contact-form">
+      <input type="text" placeholder="Imię" required/>
+      <input type="email" placeholder="Email" required/>
+      <textarea placeholder="Wiadomość" required></textarea>
+      <button type="submit">Wyślij</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Karol. Wszystkie prawa zastrzeżone.</p>
+  </footer>
 </body>
 </html>
