@@ -1,18 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const toggleButton = document.querySelector(".theme-toggle");
+const elements = document.querySelectorAll(".fade-in");
 
-    toggleButton.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        toggleButton.textContent = 
-            document.body.classList.contains("dark-mode") ? "☀️ Tryb jasny" : "🌙 Tryb ciemny";
-    });
-
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            document.querySelector(link.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+    }
+  });
 });
+
+elements.forEach(el => observer.observe(el));
